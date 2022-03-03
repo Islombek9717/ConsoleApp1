@@ -10,21 +10,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string color, pluralNoun, celebrity;
-
-            Console.Write("Enter a color: ");
-            color = Console.ReadLine();
-
-            Console.Write("Enter a plural noun: ");
-            pluralNoun = Console.ReadLine();
-
-            Console.Write("Enter a celebrity: ");
-            celebrity = Console.ReadLine();
-
-            Console.WriteLine("Roses are " + color);
-            Console.WriteLine(pluralNoun + " are blue");
-            Console.WriteLine("I Love " + celebrity);
+            Console.WriteLine(GetMax(12, 10, 3));
             Console.ReadLine();
+        }
+
+        static int GetMax(int num1, int num2, int num3)
+        {
+            int result;
+            
+            if(num1 >= num2 && num1 >= num3)
+            {
+                result = num1;
+            }
+            else if(num2 >= num1 && num2 >= num3)
+            {
+                result = num2;
+            }
+            else
+            {
+                result = num3;
+            }
+            return result;
         }
     }
 }
